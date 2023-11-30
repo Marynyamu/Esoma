@@ -76,9 +76,45 @@
     <button type="submit">Sign Up</button>
     
     <div>
-        <a href="#">Forgot Password?</a>
+	    <a href="#" id="forgotPasswordLink">Forgot Password?</a>
     </div>
 </form>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    const forgotPasswordLink = document.getElementById('forgotPasswordLink');
 
+    // Add a click event listener to the link
+    forgotPasswordLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        // Perform an action using Flask's endpoint here
+        // Example: Send a POST request to the Flask API endpoint for password change
+        fetch('/api/password_change', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                // Include necessary data like username, old password, new password, etc.
+                username: 'username',
+                old_password: 'old_password',
+                new_password: 'new_password'
+            })
+        })
+        .then(response => {
+            // Handle the response from the API
+            if (response.ok) {
+                // Password change was successful
+                console.log('Password changed successfully!');
+            } else {
+                // Password change failed
+                console.log('Password change failed.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+});
+</script>
 </body>
 </html>
