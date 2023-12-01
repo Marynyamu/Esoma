@@ -1,0 +1,10 @@
+LICENSE.txt
+setup.py
+app/__init__.py
+app/learning.py
+mary.egg-info/PKG-INFO
+mary.egg-info/SOURCES.txt
+mary.egg-info/dependency_links.txt
+mary.egg-info/top_level.txt
+models/__init__.py
+models/user.py
