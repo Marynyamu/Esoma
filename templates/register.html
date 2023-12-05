@@ -6,10 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8dbdb;
+        }
+
+        h1 {
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ff6b6b;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            font-size: 2em;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+            position: relative;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #ff6b6b;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff5252;
+        }
+
+        a {
+            position: absolute;
+            bottom: 250px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-decoration: none;
+            color: #ff6b6b;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff5252;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Register Page</h1>
+    <h1>Register To Get Started </h1>
 
     <form method="POST" action="">
         {{ form.hidden_tag() }}
